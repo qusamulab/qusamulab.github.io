@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ykus4@root:~$</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<canvas id="matrix-bg"></canvas>
+
+<div class="container">
+
+  <!-- Hero -->
+  <div class="term-window">
+    <div class="term-titlebar">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+      <span class="term-path">visitor@ykus4:~$ whoami</span>
+    </div>
+    <div class="term-body">
+      <div class="hero">
+        <div class="avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 64" width="88" height="64">
+            <!-- row 0 -->
+            <rect x="16" y="0"  width="8" height="8" fill="#39ff14"/>
+            <rect x="64" y="0"  width="8" height="8" fill="#39ff14"/>
+            <!-- row 1 -->
+            <rect x="24" y="8"  width="8" height="8" fill="#39ff14"/>
+            <rect x="56" y="8"  width="8" height="8" fill="#39ff14"/>
+            <!-- row 2 -->
+            <rect x="16" y="16" width="8" height="8" fill="#39ff14"/>
+            <rect x="24" y="16" width="8" height="8" fill="#39ff14"/>
+            <rect x="32" y="16" width="8" height="8" fill="#39ff14"/>
+            <rect x="40" y="16" width="8" height="8" fill="#39ff14"/>
+            <rect x="48" y="16" width="8" height="8" fill="#39ff14"/>
+            <rect x="56" y="16" width="8" height="8" fill="#39ff14"/>
+            <rect x="64" y="16" width="8" height="8" fill="#39ff14"/>
+            <!-- row 3 -->
+            <rect x="8"  y="24" width="8" height="8" fill="#39ff14"/>
+            <rect x="16" y="24" width="8" height="8" fill="#39ff14"/>
+            <rect x="32" y="24" width="8" height="8" fill="#39ff14"/>
+            <rect x="40" y="24" width="8" height="8" fill="#39ff14"/>
+            <rect x="48" y="24" width="8" height="8" fill="#39ff14"/>
+            <rect x="64" y="24" width="8" height="8" fill="#39ff14"/>
+            <rect x="72" y="24" width="8" height="8" fill="#39ff14"/>
+            <!-- row 4 -->
+            <rect x="0"  y="32" width="8" height="8" fill="#39ff14"/>
+            <rect x="8"  y="32" width="8" height="8" fill="#39ff14"/>
+            <rect x="16" y="32" width="8" height="8" fill="#39ff14"/>
+            <rect x="24" y="32" width="8" height="8" fill="#39ff14"/>
+            <rect x="32" y="32" width="8" height="8" fill="#39ff14"/>
+            <rect x="40" y="32" width="8" height="8" fill="#39ff14"/>
+            <rect x="48" y="32" width="8" height="8" fill="#39ff14"/>
+            <rect x="56" y="32" width="8" height="8" fill="#39ff14"/>
+            <rect x="64" y="32" width="8" height="8" fill="#39ff14"/>
+            <rect x="72" y="32" width="8" height="8" fill="#39ff14"/>
+            <rect x="80" y="32" width="8" height="8" fill="#39ff14"/>
+            <!-- row 5 -->
+            <rect x="0"  y="40" width="8" height="8" fill="#39ff14"/>
+            <rect x="16" y="40" width="8" height="8" fill="#39ff14"/>
+            <rect x="24" y="40" width="8" height="8" fill="#39ff14"/>
+            <rect x="32" y="40" width="8" height="8" fill="#39ff14"/>
+            <rect x="40" y="40" width="8" height="8" fill="#39ff14"/>
+            <rect x="48" y="40" width="8" height="8" fill="#39ff14"/>
+            <rect x="56" y="40" width="8" height="8" fill="#39ff14"/>
+            <rect x="64" y="40" width="8" height="8" fill="#39ff14"/>
+            <rect x="80" y="40" width="8" height="8" fill="#39ff14"/>
+            <!-- row 6 -->
+            <rect x="0"  y="48" width="8" height="8" fill="#39ff14"/>
+            <rect x="16" y="48" width="8" height="8" fill="#39ff14"/>
+            <rect x="64" y="48" width="8" height="8" fill="#39ff14"/>
+            <rect x="80" y="48" width="8" height="8" fill="#39ff14"/>
+            <!-- row 7 -->
+            <rect x="24" y="56" width="8" height="8" fill="#39ff14"/>
+            <rect x="32" y="56" width="8" height="8" fill="#39ff14"/>
+            <rect x="48" y="56" width="8" height="8" fill="#39ff14"/>
+            <rect x="56" y="56" width="8" height="8" fill="#39ff14"/>
+          </svg>
+        </div>
+        <div class="hero-text">
+          <h1><span class="prompt">&gt;</span> Yoshiki Kusama</h1>
+          <div class="handle">@ykus4</div>
+          <p class="bio" data-text="Newbie independent security researcher"></p>
+          <div class="links">
+            <a class="link-item" href="https://github.com/ykus4" target="_blank">
+              <svg class="link-icon" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+              github.com/ykus4
+            </a>
+            <a class="link-item" href="https://x.com/yocchii_" target="_blank">
+              <svg class="link-icon" viewBox="0 0 16 16"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0016 3.542a6.658 6.658 0 01-1.889.518 3.301 3.301 0 001.447-1.817 6.533 6.533 0 01-2.087.793A3.286 3.286 0 007.875 6.03a9.325 9.325 0 01-6.767-3.429 3.289 3.289 0 001.018 4.382A3.323 3.323 0 01.64 6.575v.045a3.288 3.288 0 002.632 3.218 3.203 3.203 0 01-.865.115 3.23 3.23 0 01-.614-.057 3.283 3.283 0 003.067 2.277A6.588 6.588 0 010 13.288a9.29 9.29 0 005.026 1.472"/></svg>
+              @yocchii_
+            </a>
+            <a class="link-item" href="mailto:a2gwhitex@icloud.com">
+              <svg class="link-icon" viewBox="0 0 16 16"><path d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5C0 2.784.784 2 1.75 2zM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809v6.442zm13-8.181L8 7.88 1.5 4.07v-.32a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v.32z"/></svg>
+              a2gwhitex@icloud.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="section">
+    <div class="section-title"><span class="prompt">$</span> curl -s api.github.com/users/ykus4 <span class="pipe">|</span> jq</div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number" id="stat-repos">–</div>
+        <div class="stat-label">Repositories</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="stat-stars">–</div>
+        <div class="stat-label">Stars earned</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="stat-followers">–</div>
+        <div class="stat-label">Followers</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="section">
+    <div class="section-title"><span class="prompt">$</span> cat skills.sh</div>
+    <div class="skills">
+      <span class="skill"><span class="skill-dot" style="background:#3572a5"></span>Python</span>
+      <span class="skill"><span class="skill-dot" style="background:#e55c5c"></span>Mobile Security</span>
+      <span class="skill"><span class="skill-dot" style="background:#e55c5c"></span>Trust &amp; Safety</span>
+      <span class="skill"><span class="skill-dot" style="background:#e55c5c"></span>LLM Security</span>
+      <span class="skill"><span class="skill-dot" style="background:#e55c5c"></span>Malware Analysis</span>
+      <span class="skill"><span class="skill-dot" style="background:#e55c5c"></span>Reverse Engineering</span>
+      <span class="skill"><span class="skill-dot" style="background:#e07b39"></span>Frida</span>
+      <span class="skill"><span class="skill-dot" style="background:#6f42c1"></span>Machine Learning</span>
+      <span class="skill"><span class="skill-dot" style="background:#017cee"></span>Apache Airflow</span>
+    </div>
+  </div>
+
+  <!-- Tools -->
+  <div class="section">
+    <div class="section-title"><span class="prompt">$</span> ls -la tools/</div>
+    <div class="repos-grid tools">
+      <div class="repo-card">
+        <a class="repo-name" href="https://github.com/ykus4/kagura" target="_blank">kagura</a>
+        <div class="repo-desc">LLVM pass plugin for native code obfuscation — CFG flattening, string encryption, anti-debug, VM virtualization, and more. Supports iOS & Android.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#f34b7d"></span>C++</span>
+          <span id="stars-kagura">★ –</span>
+        </div>
+      </div>
+      <div class="repo-card">
+        <a class="repo-name" href="https://github.com/ykus4/shirayuki" target="_blank">shirayuki</a>
+        <div class="repo-desc">Runtime memory toolkit for jailbroken iOS — scan, patch, freeze, and pointer scan with in-app overlay GUI.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#6866fb"></span>Objective-C++</span>
+          <span id="stars-shirayuki">★ –</span>
+        </div>
+      </div>
+      <div class="repo-card">
+        <a class="repo-name" href="https://github.com/ykus4/shingan" target="_blank">shingan</a>
+        <div class="repo-desc">Static analysis tool that visualizes iOS app exposure to reverse engineering.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#3572a5"></span>Python</span>
+          <span id="stars-shingan">★ –</span>
+        </div>
+      </div>
+      <div class="repo-card">
+        <a class="repo-name" href="https://github.com/ykus4/memdroid" target="_blank">memdroid</a>
+        <div class="repo-desc">ADB-based memory modification tool for rooted Android devices.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#00add8"></span>Go</span>
+          <span id="stars-memdroid">★ –</span>
+        </div>
+      </div>
+      <div class="repo-card">
+        <a class="repo-name" href="https://github.com/ykus4/fuin" target="_blank">fuin</a>
+        <div class="repo-desc">Web-based Android APK packer. Encrypts DEX bytecode, native libraries, and assets with AES-256-GCM. Supports Unity, multidex, and standard apps. No source changes required.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#3572a5"></span>Python</span>
+          <span id="stars-fuin">★ –</span>
+        </div>
+      </div>
+      <div class="repo-card">
+        <a class="repo-name" href="https://github.com/ykus4/enma" target="_blank">enma</a>
+        <div class="repo-desc">Frida-based Android Analyzer toolkit.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span>
+          <span id="stars-enma">★ –</span>
+        </div>
+      </div>
+      <div class="repo-card">
+        <a class="repo-name" href="https://github.com/ykus4/pypproxy" target="_blank">pypproxy</a>
+        <div class="repo-desc">MITM HTTP/HTTPS proxy for inspecting and modifying traffic — GUI/CUI, rule engine, GraphQL support, security tools.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#3572a5"></span>Python</span>
+          <span id="stars-pypproxy">★ –</span>
+        </div>
+      </div>
+      <div class="repo-card">
+        <a class="repo-name" href="https://github.com/ykus4/aioq" target="_blank">aioq</a>
+        <div class="repo-desc">Async job queue for Python — Redis/PostgreSQL/MySQL backends, priority queues, job dependencies, dead letter queues, Prometheus metrics, built-in dashboard.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#3572a5"></span>Python</span>
+          <span id="stars-aioq">★ –</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Research Papers -->
+  <div class="section">
+    <div class="section-title"><span class="prompt">$</span> find papers/ -name <span class="str">"*.pdf"</span></div>
+    <div class="repos-grid papers">
+      <div class="repo-card">
+        <a class="repo-name" href="https://zenodo.org/records/20361447" target="_blank">Kagura: A Game Anti-Cheat Obfuscation Toolkit for the LLVM New Pass Manager</a>
+        <div class="repo-desc">An open-source LLVM New Pass Manager obfuscation and anti-tamper toolkit for mobile game anti-cheat binaries on iOS and Android. Provides nine composable LLVM passes including control-flow flattening, bogus control flow, instruction substitution, string encryption, constant obfuscation, memory-value obfuscation, indirect branching, and basic-block splitting/reordering. Includes IL2CPP-aware string handling and dual-XOR tamper detection.</div>
+        <div class="repo-meta">
+          <span>2026-05-24</span>
+          <span>Zenodo</span>
+        </div>
+        <div>
+          <a href="https://doi.org/10.5281/zenodo.20361447" target="_blank">
+            <img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20361447-blue" alt="DOI" />
+          </a>
+        </div>
+      </div>
+      <div class="repo-card">
+        <a class="repo-name" href="https://zenodo.org/records/20069552" target="_blank">Logic Privacy for Game Anti-Cheat Systems: Formal Foundations and Homomorphic Evaluation</a>
+        <div class="repo-desc">A framework for hiding anti-cheat detection logic via server-side fully homomorphic encryption (FHE). Clients encrypt game state under a public key; the server evaluates detection functions over ciphertexts, returning only a binary verdict. Proves logic secrecy and soundness under LWE, and proposes a randomized response mechanism against adaptive oracle queries.</div>
+        <div class="repo-meta">
+          <span>2026-05-07</span>
+          <span>Zenodo</span>
+        </div>
+        <div>
+          <a href="https://doi.org/10.5281/zenodo.20069552" target="_blank">
+            <img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20069552-blue" alt="DOI" />
+          </a>
+        </div>
+      </div>
+      <div class="repo-card">
+        <a class="repo-name" href="https://zenodo.org/records/19664886" target="_blank">Fourier-Polynomial Features for Obfuscation-Robust Android Malware Detection</a>
+        <div class="repo-desc">Spectral feature extraction framework for Android malware detection. Extracts normalized power spectra from raw DEX bytecode and compresses them into compact feature vectors via polynomial approximation — robust against graph-preserving obfuscation.</div>
+        <div class="repo-meta">
+          <span>2026-04-20</span>
+          <span>Zenodo</span>
+        </div>
+        <div>
+          <a href="https://doi.org/10.5281/zenodo.19664886" target="_blank">
+            <img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19664886-blue" alt="DOI" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contribution Graph -->
+  <div class="section">
+    <div class="section-title"><span class="prompt">$</span> git log --graph --oneline --all</div>
+    <div class="contrib-graph">
+      <img src="https://ghchart.rshah.org/39ff14/ykus4" alt="ykus4's GitHub contribution chart" style="width:100%;height:auto;" />
+    </div>
+  </div>
+
+  <footer>
+    <p><span class="prompt">$</span> echo "built by ykus4" <span class="cursor">▊</span></p>
+  </footer>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
