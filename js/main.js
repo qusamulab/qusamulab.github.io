@@ -1,4 +1,4 @@
-const GITHUB_USER = 'ykus4';
+const GITHUB_USER = 'qusamulab';
 const TOOL_REPOS = ['fuin', 'memdroid', 'enma', 'shirayuki', 'kagura', 'shingan', 'pypproxy', 'aioq'];
 
 function typeWriter(el, text, speed = 28) {
